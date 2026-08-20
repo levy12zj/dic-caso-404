@@ -2,15 +2,13 @@ services:
   - type: web
     name: dic-caso-404
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm run build
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
         value: 24.19.0
-      - key: DATA_DIR
-        value: /var/data
-    disk:
-      name: dic-data
-      mountPath: /var/data
-      sizeGB: 1
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
