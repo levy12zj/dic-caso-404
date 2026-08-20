@@ -1,0 +1,1 @@
+{"name":"dic-caso-404","private":true,"scripts":{"dev":"node server.mjs","start":"node server.mjs","build":"node --check app.js"}}
